@@ -1,4 +1,5 @@
 TonyTheCoder::Application.routes.draw do
+  root "static_pages#home"
   get "static_pages/home"
   get "static_pages/contact"
   get "static_pages/projects"
