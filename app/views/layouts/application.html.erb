@@ -1,42 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>TonyTheCoder</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TonyTheCoder</title>
+	<meta name="description" content="">
+    <meta name="author" content="">
+	<%= stylesheet_link_tag "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+  	<%= csrf_meta_tags %>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-		 <header class="navbar navbar-fixed-top navbar-inverse">
-			  <div class="navbar-inner">
-			    <div class="container">
-			      <%= link_to "TonyTheCoder", '#', id: "logo" %>
-			      <nav>
-			        <ul class="nav pull-right">
-			         <li> <%= link_to image_tag("TonySmallest.jpeg", size: "26x12", alt: "TonyPic") %></li>
-			          <li><%= link_to "Home",    '#' %></li>
-			          <li><%= link_to "Projects",    '#' %></li>
-			          <li><%= link_to "Resume", '#' %></li>
+<body id="page-top">
 
-			        </ul>
-			      </nav>
-			    </div>
-			  </div>
-		</header>
-  <div class="container">
-	<%= yield %>
-		   <footer class="footer">
-				  <small>
-				    Tony Ehret
-				  </small>
-				  <nav>
-				    <ul>
-				      <li><%= link_to "Twitter",   'http://twitter.com/TonyTheCoder' %></li>
-				      <li><%= link_to "GitHub",   'http://www.github.com/Nirvanatone' %></li>
-				      <li><%= link_to "About",   '#' %></li>
-				      <li><%= link_to "Contact", '#' %></li>
-				    </ul>
-				  </nav>
-		</footer>
+	<!-- start:main -->
+	<div class="container" id="main">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+				<div id="sidebar">
+					<div class="sosmed">
+						<div class="text-center">
+							<a href="https://github.com/TonyTheCoder"><i class="fa fa-github fa-2x" data-toggle="tooltip" data-placement="top" title="GitHub"></i></a>
+							<a href="https://twitter.com/TonyTheCoder"><i class="fa fa-twitter fa-2x" data-toggle="tooltip" data-placement="top" title="Twitter"></i></a>
+							<a href="https://www.linkedin.com/profile/view?id=29718361"><i class="fa fa-linkedin fa-2x" data-toggle="tooltip" data-placement="top" title="LinkedIn"></i></a>
+						</div>
+					</div>
+					<div class="user">
+						<div class="text-center">
+							<!-- <img src="file:///home/ntone/RubyDevelopment/rails_projects/tony_the_coder/app/assets/images/user.jpg" class="img-circle"> -->
+							         <%= image_tag("Tony.jpg", alt: "TonyTheCoder", class: "img-circle")  %>
+
+						</div>
+						<div class="user-head">
+							<h1>Tony Ehret</h1>
+							<div class="hr-center"></div>
+							<h5>Web Developer</h5>
+							<h5>I.T. Architect</h5>
+						</div>
+					</div>
+					<div class="link-me">
+						<div class="text-center">
+							<a href="#"><i class="fa fa-download fa-2x" data-toggle="tooltip" data-placement="top" title="Download My CV"></i></a>
+							<a href="#"><i class="fa fa-flag fa-2x" data-toggle="tooltip" data-placement="top" title="Get in Touch"></i></a>
+							<a href="#"><i class="fa fa-money fa-2x" data-toggle="tooltip" data-placement="top" title="Hire Me"></i></a>
+						</div>
+						<div class="hr-center"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				<div id="content">
+					<!-- start:navbar -->
+					<nav class="navbar navbar-default navbar-static-top" role="navigation">
+						<div class="navbar-header page-scroll">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse navbar-ex1-collapse">
+							<ul class="nav navbar-nav navbar-left">
+								<li class="page-scroll"><a href="#id-profile">// Profile</a></li>
+								<li class="page-scroll"><a href="#id-resume">// Resume</a></li>
+								<li class="page-scroll"><a href="#id-blog">// Blog</a></li>
+								<li class="page-scroll"><a href="#id-contact">// Contact</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li class="page-scroll"><a href="#id-work">
+									<i class="fa fa-angle-double-down"></i>
+								</a></li>
+							</ul>
+						</div>
+					</nav>
+					<%= yield %>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+					<!-- end:navbar -->
+
+
+		
 </body>
 </html>
