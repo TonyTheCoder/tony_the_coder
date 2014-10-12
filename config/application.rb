@@ -23,7 +23,6 @@ module TonyTheCoder
         config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
         config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
-        # make sure precompiled fonts are used 
-        config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
+     
   end
 end
