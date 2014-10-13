@@ -1,6 +1,6 @@
 // tooltip
 
-$('i.fa').tooltip();
+//$('i.fa').tooltip();
 
 // Skills
 
