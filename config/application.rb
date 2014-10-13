@@ -22,7 +22,7 @@ module TonyTheCoder
   
         config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
         config.assets.paths << "#{Rails.root}/app/assets/fonts"
-
+        config.serve_static_assets = true
      
   end
 end
